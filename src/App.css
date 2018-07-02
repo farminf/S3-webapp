@@ -163,5 +163,5 @@ h5 {
 }
 
 .button-upload {
-  padding-left: 10px;
+  margin-left: 10px !important;
 }
