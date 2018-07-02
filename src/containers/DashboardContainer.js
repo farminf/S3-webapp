@@ -6,7 +6,7 @@ import {
   Button,
   Message,
   Grid,
-  Icon
+  Confirm
 } from "semantic-ui-react";
 import { connect } from "react-redux";
 import {
@@ -26,7 +26,9 @@ class DashboardContainer extends Component {
       fileName: "",
       loading: false,
       openNotification: false,
-      contentNotification: ""
+      contentNotification: "",
+      deleteconfirm: false,
+      fileForDelete: ""
     };
   }
 
@@ -63,11 +65,13 @@ class DashboardContainer extends Component {
   onFileSelect = f => {
     //console.log(this.myInput.current.inputRef.files[0]);
     const file = f.target.files[0];
-    const filename = file.name.replace(/\s/g, "_");
-    this.setState({
-      fileInput: file,
-      fileName: filename
-    });
+    if (file) {
+      const filename = file.name.replace(/\s/g, "_");
+      this.setState({
+        fileInput: file,
+        fileName: filename
+      });
+    }
   };
 
   seLoading = state => {
@@ -127,7 +131,10 @@ class DashboardContainer extends Component {
                               circular
                               icon="delete"
                               onClick={() =>
-                                this.props.startDeleteFile(item.key)
+                                this.setState({
+                                  deleteconfirm: true,
+                                  fileForDelete: item.key
+                                })
                               }
                             />
                           </List.Content>
@@ -155,6 +162,16 @@ class DashboardContainer extends Component {
             </Grid.Column>
           </Grid>
         </Segment>
+        <Confirm
+          open={this.state.deleteconfirm}
+          onCancel={() =>
+            this.setState({ deleteconfirm: false, fileForDelete: "" })
+          }
+          onConfirm={() => {
+            this.props.startDeleteFile(this.state.fileForDelete);
+            this.setState({ deleteconfirm: false, fileForDelete: "" });
+          }}
+        />
       </div>
     );
   }

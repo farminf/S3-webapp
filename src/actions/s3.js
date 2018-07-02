@@ -48,7 +48,7 @@ export function startGetFile(filename) {
 
 export function startDeleteFile(filename) {
   return (dispatch, getState) => {
-    Storage.remove("test.txt")
+    Storage.remove(filename)
       .then(result => {
         console.log(result);
         dispatch(startGetList());
