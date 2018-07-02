@@ -1,3 +1,10 @@
+/**
+ * @author FarminF
+ * @email farmin.f@gmail.com
+ * @create date 2018-07-02 12:43:56
+ * @modify date 2018-07-02 12:43:56
+ * @desc [description]
+ */
 import React from "react";
 import { connect } from "react-redux";
 

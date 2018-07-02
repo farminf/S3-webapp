@@ -1,3 +1,11 @@
+/**
+ * @author FarminF
+ * @email farmin.f@gmail.com
+ * @create date 2018-07-02 12:43:56
+ * @modify date 2018-07-02 12:43:56
+ * @desc [description]
+ */
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -6,7 +14,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import Amplify from "aws-amplify";
 import awsConfig from "./utils/awsconfig";
 import configureStore from "./store/configureStore";
-import { getCurrentSession, setSession } from "./actions/auth";
+import { getCurrentSession, setSession, loggedOut } from "./actions/auth";
 import LoadingProgress from "./components/LoaingProgress";
 
 const store = configureStore();
@@ -30,6 +38,7 @@ store
   })
   .catch(err => {
     console.log(err);
+    store.dispatch(loggedOut());
     ReactDOM.render(jsx, document.getElementById("root"));
     registerServiceWorker();
   });
