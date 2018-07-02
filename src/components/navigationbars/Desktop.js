@@ -33,7 +33,7 @@ class NavigationbarDesktop extends React.Component {
                     fontWeight: "700"
                   }}
                 >
-                  Techedge S3
+                  Techedge Storage
                 </Header>
               </NavLink>
             </Menu.Item>

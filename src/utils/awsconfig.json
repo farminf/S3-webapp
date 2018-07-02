@@ -6,7 +6,7 @@
     "userPoolWebClientId": "7ffrpc56fmm3kveto2bsaq5j4r"
   },
   "Storage": {
-    "bucket": "aptar-raw-files",
-    "region": "us-east-2"
+    "bucket": "aptar-files",
+    "region": "eu-west-1"
   }
 }

@@ -37,29 +37,31 @@ class DashboardContainer extends Component {
   };
 
   onFileUpload = () => {
-    this.seLoading(true);
-    this.props
-      .startUpload(this.state.fileName, this.state.fileInput)
-      .then(res => {
-        this.props.startGetList();
-        this.setState({
-          fileInput: "",
-          fileName: "",
-          loading: false,
-          openNotification: true,
-          contentNotification: "Uploaded successfully"
+    if (this.state.fileName) {
+      this.seLoading(true);
+      this.props
+        .startUpload(this.state.fileName, this.state.fileInput)
+        .then(res => {
+          this.props.startGetList();
+          this.setState({
+            fileInput: "",
+            fileName: "",
+            loading: false,
+            openNotification: true,
+            contentNotification: "Uploaded successfully"
+          });
+        })
+        .catch(err => {
+          this.props.startGetList();
+          this.setState({
+            fileInput: "",
+            fileName: "",
+            loading: false,
+            openNotification: true,
+            contentNotification: err
+          });
         });
-      })
-      .catch(err => {
-        this.props.startGetList();
-        this.setState({
-          fileInput: "",
-          fileName: "",
-          loading: false,
-          openNotification: true,
-          contentNotification: err
-        });
-      });
+    }
   };
 
   onFileSelect = f => {
@@ -117,7 +119,7 @@ class DashboardContainer extends Component {
           <Grid textAlign="center">
             <Grid.Column computer={12} style={{ paddingTop: "30px" }}>
               <List celled divided verticalAlign="middle" size="large">
-                {this.props.files &&
+                {this.props.files && this.props.files.length > 0 ? (
                   this.props.files.map(item => {
                     if (item.key) {
                       return (
@@ -157,7 +159,14 @@ class DashboardContainer extends Component {
                         </List.Item>
                       );
                     }
-                  })}
+                  })
+                ) : (
+                  <List.Item>
+                    <List.Content>
+                      <List.Header>No Item</List.Header>
+                    </List.Content>
+                  </List.Item>
+                )}
               </List>
             </Grid.Column>
           </Grid>

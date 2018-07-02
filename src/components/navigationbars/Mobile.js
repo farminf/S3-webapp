@@ -30,7 +30,7 @@ class NavigationbarMobile extends React.Component {
                   fontWeight: "700"
                 }}
               >
-                Techedge S3
+                Techedge Storage
               </Header>
             </Menu.Item>
 
