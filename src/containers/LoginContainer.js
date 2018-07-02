@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import {
-  Grid,
-  Header,
-  Message,
-  Segment,
-  Divider,
-  Image
-} from "semantic-ui-react";
+import { Grid, Header, Segment, Divider, Image } from "semantic-ui-react";
 import LoginForm from "../components/LoginForm";
 import { startLogin } from "../actions/auth";
 import { showModal } from "../actions/modal";

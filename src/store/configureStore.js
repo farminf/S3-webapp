@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import authReducer from "../reducers/auth";
 import modalReducer from "../reducers/modal";
 import errorsReducer from "../reducers/errors";
+import s3 from "../reducers/s3";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -13,7 +14,8 @@ export default () => {
     combineReducers({
       auth: authReducer,
       modals: modalReducer,
-      errors: errorsReducer
+      errors: errorsReducer,
+      s3: s3
     }),
     composeEnhancers(applyMiddleware(thunk))
   );

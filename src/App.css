@@ -152,3 +152,16 @@ h5 {
 .title {
   font-family: "Exo 2", sans-serif !important;
 }
+
+.nav-bar {
+  margin-bottom: 0px;
+}
+
+.ui.inverted.menu {
+  background-color: #29aca6;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.button-upload {
+  padding-left: 10px;
+}

@@ -5,8 +5,6 @@ import {
   SET_SESSION,
   REQUIRED_PASS_CHANGED
 } from "../actions/auth";
-import { loadState } from "../store/localStorage";
-import _ from "lodash";
 import { history } from "../routers/AppRouter";
 
 export default (state = {}, action) => {

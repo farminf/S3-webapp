@@ -1,13 +1,5 @@
 import { Auth } from "aws-amplify";
-import {
-  addLoginError,
-  resetLoginError,
-  addRegisterError,
-  resetRegisterError,
-  addRegisterConfirmError,
-  resetRegisterConfirmError
-} from "./error";
-import { showModal, ERROR_MODAL, INFO_MODAL } from "./modal";
+import { addLoginError, resetLoginError } from "./error";
 export const LOGGED_IN = "LOGGED_IN";
 export const LOGGED_OUT = "LOGGED_OUT";
 export const LOGGING_PROCESS = "LOGGING_PROCESS";

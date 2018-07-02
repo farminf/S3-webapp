@@ -9,6 +9,7 @@ import {
   REQUIRED_PASS_CHANGED
 } from "../actions/auth";
 import LoadingProgress from "../components/LoaingProgress";
+import { Grid } from "semantic-ui-react";
 
 const MainContainer = ({ authState }) => {
   switch (authState) {
@@ -17,7 +18,19 @@ const MainContainer = ({ authState }) => {
     case LOGGED_OUT:
       return <Redirect to="/login" />;
     case LOGGING_PROCESS:
-      return <LoadingProgress />;
+      return (
+        <Grid
+          container
+          columns={4}
+          textAlign="center"
+          style={{
+            paddingTop: "80px",
+            height: "calc(100% - 1px)"
+          }}
+        >
+          <LoadingProgress content="Loading" size="huge" />
+        </Grid>
+      );
     case REQUIRED_PASS_CHANGED:
       return <Redirect to="/forcechangepassword" />;
     case SET_SESSION:

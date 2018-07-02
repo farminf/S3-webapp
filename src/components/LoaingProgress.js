@@ -1,20 +1,10 @@
 import React from "react";
-import { Loader, Grid, Dimmer } from "semantic-ui-react";
+import { Loader, Dimmer } from "semantic-ui-react";
 
-export default () => {
+export default ({ content, size }) => {
   return (
-    <Grid
-      container
-      columns={4}
-      textAlign="center"
-      style={{
-        paddingTop: "80px",
-        height: "calc(100% - 1px)"
-      }}
-    >
-      <Dimmer active inverted>
-        <Loader indeterminate inverted content="Loading" size="huge" />
-      </Dimmer>
-    </Grid>
+    <Dimmer active inverted>
+      <Loader inverted content={content} size={size} />
+    </Dimmer>
   );
 };
