@@ -93,7 +93,7 @@ class DashboardContainer extends Component {
   render() {
     return (
       <div>
-        <h1>Aptar Bucket</h1>
+        <h1>Bucket</h1>
         {this.state.openNotification && (
           <Message
             onDismiss={() =>

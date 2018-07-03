@@ -26,9 +26,6 @@ class NavigationbarDesktop extends React.Component {
       <Responsive minWidth={550}>
         <div className="nav-bar">
           <Menu fixed="top" inverted>
-            {/*<Menu.Item style={{ marginLeft: "70px" }}>
-              <Image size="mini" src={logo} alt={"Techedge Logo"} />
-    </Menu.Item>*/}
             <Menu.Item>
               <NavLink to="/">
                 <Header
@@ -40,7 +37,7 @@ class NavigationbarDesktop extends React.Component {
                     fontWeight: "700"
                   }}
                 >
-                  Techedge Storage
+                  S3 WebApp
                 </Header>
               </NavLink>
             </Menu.Item>

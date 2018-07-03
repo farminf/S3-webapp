@@ -41,7 +41,7 @@ class LoginContainer extends Component {
                 fontWeight: "700"
               }}
             >
-              Techedge Storage
+              S3 WebApp
             </Header>
             <Image src={LogoImage} size="large" centered />
           </Grid.Column>
@@ -59,7 +59,7 @@ class LoginContainer extends Component {
                 fontWeight: "700"
               }}
             >
-              Techedge Storage
+              S3 WebApp
             </Header>
           </Grid.Column>
 

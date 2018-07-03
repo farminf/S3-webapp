@@ -1,5 +1,5 @@
 {
-  "name": "techedgestorage",
+  "name": "s3webapp",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -11,6 +11,7 @@
     "aws-amplify-react": "^0.1.53",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.1",
+    "jest": "^23.2.0",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "prettier": "^1.13.7",

@@ -24,9 +24,6 @@ class NavigationbarMobile extends React.Component {
       <Responsive maxWidth={530}>
         <div className="nav-bar">
           <Menu fixed="top" inverted>
-            {/*<Menu.Item>
-              <Image size="mini" src={logo} alt={"Techedge Logo"} />
-            </Menu.Item>*/}
             <Menu.Item>
               <Header
                 as="h2"
@@ -37,7 +34,7 @@ class NavigationbarMobile extends React.Component {
                   fontWeight: "700"
                 }}
               >
-                Techedge Storage
+                S3 WebApp
               </Header>
             </Menu.Item>
 
