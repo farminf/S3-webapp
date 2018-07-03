@@ -181,6 +181,7 @@ class DashboardContainer extends Component {
         </Segment>
         <Confirm
           open={this.state.deleteconfirm}
+          content="Are you sure you want to delete this item?"
           onCancel={() =>
             this.setState({ deleteconfirm: false, fileForDelete: "" })
           }
