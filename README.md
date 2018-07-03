@@ -4,14 +4,14 @@ The Web Application which works as an interface for a AWS S3 Bucket.
 _bootstrapped by create-react-app_
 _Using AWS Amplify for interction with AWS_
 
-##Development
+## Development
 
 ```bash
 npm install
 npm start
 ```
 
-##Production
+## Production
 
 ```bash
 npm run build

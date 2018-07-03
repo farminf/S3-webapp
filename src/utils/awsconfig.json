@@ -1,12 +1,12 @@
 {
   "Auth": {
-    "region": "XXX",
-    "userPoolId": "XXX",
-    "identityPoolId": "XXX",
-    "userPoolWebClientId": "XXX"
+    "region": "xx-xxxx-x",
+    "userPoolId": "xx-xxxx-x_xxxxxxxxxx",
+    "identityPoolId": "xx-xxxx-xxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "userPoolWebClientId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   },
   "Storage": {
-    "bucket": "XXX",
-    "region": "XXX"
+    "bucket": "BUCKET_NAME",
+    "region": "xx-xxxx-x"
   }
 }
