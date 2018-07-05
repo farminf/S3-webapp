@@ -1,6 +1,6 @@
 # S3 WebApp (Simple Storage Service - Amazon Web Services)
 
-A simple web Application for interact with a bucket of AWS S3 without login on AWS console.(using cognito authentication and authorization)
+A simple web Application to interact with a bucket of AWS S3 without login on AWS console.(using cognito authentication and authorization)
 
 _bootstrapped by create-react-app_
 
