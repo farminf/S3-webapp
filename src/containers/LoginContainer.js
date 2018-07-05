@@ -11,7 +11,7 @@ import { Grid, Header, Segment, Divider, Image } from "semantic-ui-react";
 import LoginForm from "../components/LoginForm";
 import { startLogin } from "../actions/auth";
 import { showModal } from "../actions/modal";
-import LogoImage from "../images/logo_loginpage.jpg";
+import LogoImage from "../images/s3_512x512.png";
 
 class LoginContainer extends Component {
   render() {

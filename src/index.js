@@ -31,7 +31,6 @@ ReactDOM.render(<LoadingProgress />, document.getElementById("root"));
 store
   .dispatch(getCurrentSession())
   .then(data => {
-    console.log(data);
     store.dispatch(setSession(data));
     ReactDOM.render(jsx, document.getElementById("root"));
     registerServiceWorker();

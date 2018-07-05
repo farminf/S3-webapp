@@ -41,7 +41,6 @@ export function startLogin(username, password) {
     dispatch(resetLoginError());
     return Auth.signIn(username, password)
       .then(user => {
-        console.log(user);
         if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
           return dispatch(requiredPassChange(user));
         }
@@ -65,7 +64,6 @@ export function startChangeForcedPassword(password, requiredAttributes = {}) {
       requiredAttributes
     )
       .then(user => {
-        console.log(user);
         return dispatch(loggedIn(user.signInUserSession));
       })
       .catch(err => {
@@ -93,12 +91,9 @@ export function startChangePassword(username, oldPassword, newPassword) {
   return (dispatch, getState) => {
     return Auth.currentAuthenticatedUser()
       .then(user => {
-        console.log(user);
         return Auth.changePassword(user, oldPassword, newPassword);
       })
-      .then(data => {
-        console.log(data);
-      })
+      .then(data => {})
       .catch(err => {
         console.log(err);
       });

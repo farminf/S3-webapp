@@ -25,6 +25,7 @@ import {
 } from "../actions/s3";
 import LoaingProgress from "../components/LoaingProgress";
 import { List } from "semantic-ui-react";
+import amplifyConfig from "../utils/awsconfig.json";
 
 class DashboardContainer extends Component {
   constructor(props) {
@@ -93,7 +94,7 @@ class DashboardContainer extends Component {
   render() {
     return (
       <div>
-        <h1>Bucket</h1>
+        <h1>{amplifyConfig.Storage.bucket && amplifyConfig.Storage.bucket}</h1>
         {this.state.openNotification && (
           <Message
             onDismiss={() =>

@@ -33,7 +33,7 @@ class LoginForm extends Component {
               fluid
               icon="user"
               iconPosition="left"
-              placeholder="Email"
+              placeholder="Username"
               value={this.state.email}
               onChange={e =>
                 this.setState({ email: e.target.value.toLowerCase() })

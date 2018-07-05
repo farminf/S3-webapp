@@ -30,11 +30,9 @@ export function startGetList() {
     dispatch(listFilesFetching());
     return Storage.list("")
       .then(res => {
-        console.log(res);
         dispatch(listFiles(res));
       })
       .catch(err => {
-        console.log(err);
         dispatch(listFiles());
       });
   };
@@ -46,7 +44,6 @@ export function startGetFile(filename) {
       level: "public"
     })
       .then(result => {
-        console.log(result);
         window.open(result);
       })
       .catch(err => console.log(err));
@@ -57,7 +54,6 @@ export function startDeleteFile(filename) {
   return (dispatch, getState) => {
     Storage.remove(filename)
       .then(result => {
-        console.log(result);
         dispatch(startGetList());
       })
       .catch(err => {
